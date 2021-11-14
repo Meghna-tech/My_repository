@@ -1,37 +1,28 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:ns0="http://www.example.org/">
-
-  <rdf:Description rdf:about="http://www.example.org/Birds">
-    <ns0:above rdf:resource="http://www.example.org/Mountains"/>
-    <ns0:right_of>
-      <rdf:Description rdf:about="http://www.example.org/Sun">
-        <ns0:above rdf:resource="http://www.example.org/Mountains"/>
-      </rdf:Description>
-    </ns0:right_of>
-
+  xmlns:pos="https://example.org/position/1.0/">
+  <rdf:Description rdf:about="https://en.wikipedia.org/wiki/Tree">
+    <pos:above rdf:resource="https://en.wikipedia.org/wiki/House"/> 
   </rdf:Description>
-
-  <rdf:Description rdf:about="http://www.example.org/Tree">
-    <ns0:above rdf:resource="http://www.example.org/House"/>
+  <rdf:Description rdf:about="https://en.wikipedia.org/wiki/Sun">
+    <pos:right-of rdf:resource="https://en.wikipedia.org/wiki/Birds"/>
+    <pos:above rdf:resource="https://en.wikipedia.org/wiki/Mountains"/> 
   </rdf:Description>
-
-  <rdf:Description rdf:about="http://www.example.org/Boat">
-    <ns0:above rdf:resource="http://www.example.org/River"/>
+  <rdf:Description rdf:about="https://en.wikipedia.org/wiki/Birds">
+    <pos:above rdf:resource="https://en.wikipedia.org/wiki/Mountains"/> 
   </rdf:Description>
-
-  <rdf:Description rdf:about="http://www.example.org/Land">
-    <ns0:right_of rdf:resource="http://www.example.org/River"/>
+  <rdf:Description rdf:about="https://en.wikipedia.org/wiki/Mountains">
+    <pos:above rdf:resource="https://en.wikipedia.org/wiki/River"/> 
+    <pos:above rdf:resource="https://en.wikipedia.org/wiki/House"/> 
   </rdf:Description>
-
-  <rdf:Description rdf:about="http://www.example.org/House">
-    <ns0:above rdf:resource="http://www.example.org/Land"/>
-    <ns0:right_of rdf:resource="http://www.example.org/Boat"/>
+  <rdf:Description rdf:about="https://en.wikipedia.org/wiki/House">
+    <pos:right-of rdf:resource="https://en.wikipedia.org/wiki/Boat"/>
+    <pos:above rdf:resource="https://en.wikipedia.org/wiki/Land"/> 
   </rdf:Description>
-
-  <rdf:Description rdf:about="http://www.example.org/Mountains">
-    <ns0:above rdf:resource="http://www.example.org/House"/>
-    <ns0:above rdf:resource="http://www.example.org/River"/>
+  <rdf:Description rdf:about="https://en.wikipedia.org/wiki/Boat">
+    <pos:above rdf:resource="https://en.wikipedia.org/wiki/River"/> 
   </rdf:Description>
-
+  <rdf:Description rdf:about="https://en.wikipedia.org/wiki/Land">
+    <pos:right-of rdf:resource="https://en.wikipedia.org/wiki/River"/> 
+  </rdf:Description>
 </rdf:RDF>
