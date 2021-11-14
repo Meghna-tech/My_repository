@@ -1,19 +1,37 @@
-@prefix ns1: <http://www.example.org/> .
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://www.example.org/">
 
-ns1:Birds ns1:above ns1:Mountains ;
-    ns1:right_of ns1:Sun .
+  <rdf:Description rdf:about="http://www.example.org/Birds">
+    <ns0:above rdf:resource="http://www.example.org/Mountains"/>
+    <ns0:right_of>
+      <rdf:Description rdf:about="http://www.example.org/Sun">
+        <ns0:above rdf:resource="http://www.example.org/Mountains"/>
+      </rdf:Description>
+    </ns0:right_of>
 
-ns1:Tree ns1:above ns1:House .
+  </rdf:Description>
 
-ns1:Boat ns1:above ns1:River .
+  <rdf:Description rdf:about="http://www.example.org/Tree">
+    <ns0:above rdf:resource="http://www.example.org/House"/>
+  </rdf:Description>
 
-ns1:Land ns1:right_of ns1:River .
+  <rdf:Description rdf:about="http://www.example.org/Boat">
+    <ns0:above rdf:resource="http://www.example.org/River"/>
+  </rdf:Description>
 
-ns1:Sun ns1:above ns1:Mountains .
+  <rdf:Description rdf:about="http://www.example.org/Land">
+    <ns0:right_of rdf:resource="http://www.example.org/River"/>
+  </rdf:Description>
 
-ns1:House ns1:above ns1:Land ;
-    ns1:right_of ns1:Boat .
+  <rdf:Description rdf:about="http://www.example.org/House">
+    <ns0:above rdf:resource="http://www.example.org/Land"/>
+    <ns0:right_of rdf:resource="http://www.example.org/Boat"/>
+  </rdf:Description>
 
-ns1:Mountains ns1:above ns1:House,
-        ns1:River .
+  <rdf:Description rdf:about="http://www.example.org/Mountains">
+    <ns0:above rdf:resource="http://www.example.org/House"/>
+    <ns0:above rdf:resource="http://www.example.org/River"/>
+  </rdf:Description>
 
+</rdf:RDF>
